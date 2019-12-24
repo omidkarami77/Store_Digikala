@@ -1,3 +1,92 @@
 <resources>
-    <string name="app_name">Store_Digikala</string>
+    <string name="open_drawer">open</string>
+    <string name="close_drawer">close</string>
+    <string name="categories">آلبوم محصولات</string>
+    <string name="top_seller">پر فروش ترین ها</string>
+    <string name="new_peoduct">جدیدترین ها</string>
+    <string name="popular">محبوب ترین ها</string>
+    <string name="Search">جستجو</string>
+    <string name="mostsales">پرفروش ترین ها</string>
+    <string name="cart">سبد خرید</string>
+    <string name="cast">هزینه</string>
+    <string name="price">قیمت:</string>
+    <string name="rating">تعدادفروش:</string>
+    <string name="description">توضیحات:</string>
+    <string name="messageSnackbar">متاسفانه کالایی وجود ندارد!</string>
+    <string name="filter">فیلتر</string>
+    <string name="filterbycolor">فیلتر توسط رنگ</string>
+    <string name="sort">مرتب سازی</string>
+    <string name="setting">تنظیمات</string>
+    <string name="addtocart">اضافه کردن به سبد خرید</string>
+    <string name="username_navigation">نام کاربری</string>
+    <string name="newest_poducts">جدیدترین ها</string>
+    <string name="please_waiting_for_conncet">در حال اتصال لطفا صبر کنید...</string>
+    <string name="wellcome_to_avatarstore">Wellcome To AvatarStore</string>
+    <string name="total_cost">مجموع قیمت</string>
+    <string name="delete">حذف</string>
+    <string name="finalize_your_purchase">نهایی کردن خرید</string>
+    <string name="sign_up_to_get_a_purchase">ثبت نام برای خرید</string>
+    <string name="submit">ثبت</string>
+    <string name="address">آدرس ارسال محصول</string>
+    <string name="phone_number">شماره تماس</string>
+    <string name="emaill_gamil_com">emaill@gamil.com</string>
+    <string name="lastname">نام خانوادگی</string>
+    <string name="username_post">نام</string>
+    <string name="password">رمز عبور</string>
+    <string name="username_cart_firstname">نام کاربری</string>
+    <string name="complete_list">لیست کامل</string>
+    <string name="register_item">ثبت نام</string>
+    <string name="please_specify_your_time_in_the_form_for_notification_automatically">لطفا زمان خود برای ارسال نوتیفیکشن ثبت نمایید.</string>
+    <string name="please_specify_your_time_in_the_form_manually_for_notification">لطفا زمان خود برای ارسال نوتیفیکشن به صورت دستی ثبت نمایید.</string>
+    <string name="map_button">نقشه</string>
+
+
+    <string-array name="filter_color_spinner_string">
+        <item>None</item>
+        <item>Black</item>
+        <item>White</item>
+        <item>Blue</item>
+        <item>Red</item>
+        <item>Yellow</item>
+        <item>Green</item>
+        <item>Orange</item>
+        <item>Brown</item>
+        <item>Pink</item>
+        <item>Gray</item>
+    </string-array>
+
+    <string-array name="sort_spinner_string">
+        <item>None</item>
+        <item>Best Sellers</item>
+        <item>High to Low Prices</item>
+        <item>Low to High Prices</item>
+        <item>Newest</item>
+    </string-array>
+
+    <string-array name="cart_spinner_product">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string-array name="setting_spinner_notification_time">
+        <item>turn off</item>
+        <item>3 ساعت</item>
+        <item>5 ساعت</item>
+        <item>8 ساعت</item>
+        <item>12 ساعت</item>
+
+    </string-array>
+    <string name="title_activity_choose_address">نقشه</string>
+    <string name="home_address">آدرس منزل</string>
+    <string name="add_your_comment">ثبت نظر</string>
+    <string name="about_us">در باره ما</string>
+    <string name="add_comment_your">اضافه کردن نظر شما</string>
+    <string name="show_comment">مشاهده نظرات</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
