@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SingleFragmentActivity"></activity>
+        <activity android:name=".NavigationItemActivity"></activity>
+        <activity android:name=".SingleFragmentActivity" />
         <activity android:name=".AppActivityLuncher" />
         <activity android:name=".MainActivity">
             <intent-filter>
