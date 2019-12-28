@@ -1,4 +1,8 @@
 <resources>
+    <string name="app_name">AvatarStore</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="open_drawer">open</string>
     <string name="close_drawer">close</string>
     <string name="categories">آلبوم محصولات</string>
@@ -86,7 +90,4 @@
     <string name="about_us">در باره ما</string>
     <string name="add_comment_your">اضافه کردن نظر شما</string>
     <string name="show_comment">مشاهده نظرات</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
