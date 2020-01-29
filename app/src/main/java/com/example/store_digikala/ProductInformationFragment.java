@@ -32,6 +32,8 @@ import android.widget.Toast;
 
 import com.example.store_digikala.model.Images;
 import com.example.store_digikala.model.Products;
+import com.example.store_digikala.model.modeldata.Cart;
+import com.example.store_digikala.model.modeldata.CartLab;
 import com.example.store_digikala.network.Api;
 import com.example.store_digikala.network.RetrofitClientInstance;
 import com.squareup.picasso.Picasso;
@@ -57,7 +59,7 @@ public class ProductInformationFragment extends Fragment {
 
     private ProgressDialog mProgressDialog;
     private RecyclerView mRecyclerView;
-//    private imagesAdapter mAdapter;
+    private imagesAdapter mAdapter;
     private TextView mTitle;
     private TextView mPrice;
     private TextView mTotalSales;
@@ -97,166 +99,166 @@ public class ProductInformationFragment extends Fragment {
         fragment.setArguments(args);
         return fragment;
     }
-//
-//    @Override
-//    public void onCreate(@Nullable Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        ID = getArguments().getInt(ARG_ID_PRODUCT);
-//        mProgressDialog=new ProgressDialog(getActivity());
-//        mProgressDialog.setMessage("loading");
-//        mProgressDialog.show();
-//        Handler handler=new Handler();
-//        handler.postDelayed(new Runnable() {
-//            @Override
-//            public void run() {
-//                mProgressDialog.cancel();
-//            }
-//        },3000);
-//        setHasOptionsMenu(true);
-//
-//
-//    }
-//
-//    @Override
-//    public View onCreateView(final LayoutInflater inflater, ViewGroup container,
-//                             Bundle savedInstanceState) {
-//        // Inflate the layout for this fragment
-//        View view = inflater.inflate(R.layout.fragment_product_information, container, false);
-//        findItem(view);
-//
-//
-//        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity(), LinearLayout.HORIZONTAL, false);
-//        mRecyclerView.setLayoutManager(layoutManager);
-//
-//        RetrofitClientInstance.getRetrofitInstance().create(Api.class).getProduct(ID).enqueue(new Callback<Products>() {
-//            @SuppressLint("SetTextI18n")
-//            @Override
-//            public void onResponse(Call<Products> call, Response<Products> response) {
-//                if (response.isSuccessful()) {
-//                    Products products = response.body();
-//                    mProducts=products;
-//                    mTitle.setText(products.getName());
-//                    mPrice.setText(getString(R.string.price) + products.getPrice());
-//                    mTotalSales.setText(getString(R.string.rating) + products.getTotalSales() + "");
-//                    mDescription.setText(getString(R.string.description) + products.getDescription());
-//                    mRatingBar.setRating(Float.parseFloat(products.getAverage_rating()));
-//                    LayerDrawable stars = (LayerDrawable) mRatingBar.getProgressDrawable();
-//                    stars.getDrawable(2).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_ATOP);
-//                    mAdapter = new imagesAdapter(products.getImages());
-//                    mRecyclerView.setAdapter(mAdapter);
-//                }
-//            }
-//
-//            @Override
-//            public void onFailure(Call<Products> call, Throwable t) {
-//                Toast.makeText(getActivity(), "از اتصال اینترنت خود اطمینان حاصل فرمایید", Toast.LENGTH_SHORT).show();
-//            }
-//        });
-//
-//
-//        mButtonAddToCart.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Cart cart = new Cart();
-//                cart.setMProductCount(1);
-//                cart.setMProductId(ID);
-//                cart.setMPrice(Float.valueOf(mProducts.getPrice()));
-//                if (CartLab.getInstance().checkCart(ID)==null){
-//                    CartLab.getInstance().addCart(cart);
-//                    Toast.makeText(getActivity(), "اضافه شد", Toast.LENGTH_SHORT).show();
-//                }else {
-//                    Toast.makeText(getActivity(), "این محصول قبلا ذخیره شده است.", Toast.LENGTH_SHORT).show();
-//                }
-//
-//            }
-//
-//        });
-//
-//        showComments.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent= CommentActivity.newIntent(getActivity(),mProducts.getId());
-//                startActivity(intent);
-//            }
-//        });
-//
-//        addComment.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent= AddCommentActivity.newIntent(getActivity(),ID);
-//                startActivity(intent);
-//            }
-//        });
-//        return view;
-//    }
-//
-//    @Override
-//    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-//        inflater.inflate(R.menu.product_information_menu, menu);
-//
-//        super.onCreateOptionsMenu(menu, inflater);
-//    }
-//
-//
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        switch (item.getItemId()) {
-//            case R.id.cart_item_information:
-//                Toast.makeText(getActivity(), "ProductInformationFragment", Toast.LENGTH_SHORT).show();
-//                return true;
-//            default:
-//                return true;
-//        }
-//    }
-//
-//    private class imagesHolder extends RecyclerView.ViewHolder {
-//        private ImageView imageView;
-//
-//        public imagesHolder(@NonNull View itemView) {
-//            super(itemView);
-//            imageView = itemView.findViewById(R.id.image_item_information_recycler);
-//
-//        }
-//
-//        public void bind(String image) {
-//            if (image.length() != 0) {
-//                Picasso.get().load(image).into(imageView);
-//
-//            }
-//
-//        }
-//    }
-//
-//    private class imagesAdapter extends RecyclerView.Adapter<imagesHolder> {
-//        private List<Images> imagesList;
-//
-//        public void setImagesList(List<Images> imagesList) {
-//            this.imagesList = imagesList;
-//        }
-//
-//        public imagesAdapter(List<Images> imagesList) {
-//            this.imagesList = imagesList;
-//        }
-//
-//        @NonNull
-//        @Override
-//        public imagesHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-//            View view = LayoutInflater.from(getActivity()).inflate(R.layout.image_item_informatin_recycler, parent, false);
-//            return new imagesHolder(view);
-//        }
-//
-//        @Override
-//        public void onBindViewHolder(@NonNull imagesHolder holder, int position) {
-//            Images image = imagesList.get(position);
-//            holder.bind(image.getPath());
-//
-//        }
-//
-//        @Override
-//        public int getItemCount() {
-//            return imagesList.size();
-//        }
-//    }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        ID = getArguments().getInt(ARG_ID_PRODUCT);
+        mProgressDialog=new ProgressDialog(getActivity());
+        mProgressDialog.setMessage("loading");
+        mProgressDialog.show();
+        Handler handler=new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                mProgressDialog.cancel();
+            }
+        },3000);
+        setHasOptionsMenu(true);
+
+
+    }
+
+    @Override
+    public View onCreateView(final LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        View view = inflater.inflate(R.layout.fragment_product_information, container, false);
+        findItem(view);
+
+
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity(), LinearLayout.HORIZONTAL, false);
+        mRecyclerView.setLayoutManager(layoutManager);
+
+        RetrofitClientInstance.getRetrofitInstance().create(Api.class).getProduct(ID).enqueue(new Callback<Products>() {
+            @SuppressLint("SetTextI18n")
+            @Override
+            public void onResponse(Call<Products> call, Response<Products> response) {
+                if (response.isSuccessful()) {
+                    Products products = response.body();
+                    mProducts=products;
+                    mTitle.setText(products.getName());
+                    mPrice.setText(getString(R.string.price) + products.getPrice());
+                    mTotalSales.setText(getString(R.string.rating) + products.getTotalSales() + "");
+                    mDescription.setText(getString(R.string.description) + products.getDescription());
+                    mRatingBar.setRating(Float.parseFloat(products.getAverage_rating()));
+                    LayerDrawable stars = (LayerDrawable) mRatingBar.getProgressDrawable();
+                    stars.getDrawable(2).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_ATOP);
+                    mAdapter = new imagesAdapter(products.getImages());
+                    mRecyclerView.setAdapter(mAdapter);
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Products> call, Throwable t) {
+                Toast.makeText(getActivity(), "از اتصال اینترنت خود اطمینان حاصل فرمایید", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+        mButtonAddToCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Cart cart = new Cart();
+                cart.setMProductCount(1);
+                cart.setMProductId(ID);
+                cart.setMPrice(Float.valueOf(mProducts.getPrice()));
+                if (CartLab.getInstance().checkCart(ID)==null){
+                    CartLab.getInstance().addCart(cart);
+                    Toast.makeText(getActivity(), "اضافه شد", Toast.LENGTH_SHORT).show();
+                }else {
+                    Toast.makeText(getActivity(), "این محصول قبلا ذخیره شده است.", Toast.LENGTH_SHORT).show();
+                }
+
+            }
+
+        });
+
+        showComments.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= CommentActivity.newIntent(getActivity(),mProducts.getId());
+                startActivity(intent);
+            }
+        });
+
+        addComment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= AddCommentActivity.newIntent(getActivity(),ID);
+                startActivity(intent);
+            }
+        });
+        return view;
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.product_information_menu, menu);
+
+        super.onCreateOptionsMenu(menu, inflater);
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.cart_item_information:
+                Toast.makeText(getActivity(), "ProductInformationFragment", Toast.LENGTH_SHORT).show();
+                return true;
+            default:
+                return true;
+        }
+    }
+
+    private class imagesHolder extends RecyclerView.ViewHolder {
+        private ImageView imageView;
+
+        public imagesHolder(@NonNull View itemView) {
+            super(itemView);
+            imageView = itemView.findViewById(R.id.image_item_information_recycler);
+
+        }
+
+        public void bind(String image) {
+            if (image.length() != 0) {
+                Picasso.get().load(image).into(imageView);
+
+            }
+
+        }
+    }
+
+    private class imagesAdapter extends RecyclerView.Adapter<imagesHolder> {
+        private List<Images> imagesList;
+
+        public void setImagesList(List<Images> imagesList) {
+            this.imagesList = imagesList;
+        }
+
+        public imagesAdapter(List<Images> imagesList) {
+            this.imagesList = imagesList;
+        }
+
+        @NonNull
+        @Override
+        public imagesHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+            View view = LayoutInflater.from(getActivity()).inflate(R.layout.image_item_information_recycler, parent, false);
+            return new imagesHolder(view);
+        }
+
+        @Override
+        public void onBindViewHolder(@NonNull imagesHolder holder, int position) {
+            Images image = imagesList.get(position);
+            holder.bind(image.getPath());
+
+        }
+
+        @Override
+        public int getItemCount() {
+            return imagesList.size();
+        }
+    }
 
 
 
