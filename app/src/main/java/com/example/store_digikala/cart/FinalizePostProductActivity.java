@@ -9,6 +9,10 @@ import android.util.Log;
 
 import com.example.store_digikala.R;
 
+import static com.example.store_digikala.map.ChooseAddressActivity.ADDRESS_SAVED_CHOOSE;
+import static com.example.store_digikala.map.ChooseAddressActivity.LAT_INTEGER;
+import static com.example.store_digikala.map.ChooseAddressActivity.LONG_INTEGER;
+
 public class FinalizePostProductActivity extends AppCompatActivity {
 
     public static Intent newIntent(Context context){
