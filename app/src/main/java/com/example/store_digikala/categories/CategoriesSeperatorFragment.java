@@ -1,4 +1,4 @@
-package com.example.store_digikala.categories;
+package com.example.Store_Digikala.categories;
 
 
 import android.os.Bundle;
@@ -8,6 +8,9 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,16 +18,13 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.store_digikala.R;
-import com.example.store_digikala.model.Categories;
-import com.example.store_digikala.network.Api;
-import com.example.store_digikala.network.RetrofitClientInstance;
+import com.example.Store_Digikala.R;
+import com.example.Store_Digikala.model.Categories;
+import com.example.Store_Digikala.network.Api;
+import com.example.Store_Digikala.network.RetrofitClientInstance;
 
 import java.util.List;
 
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 /**
  * A simple {@link Fragment} subclass.

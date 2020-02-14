@@ -1,4 +1,4 @@
-package com.example.store_digikala.service;
+package com.example.Store_Digikala.service;
 
 import android.app.AlarmManager;
 import android.app.IntentService;
@@ -15,12 +15,12 @@ import androidx.annotation.Nullable;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 
-import com.example.store_digikala.information.ProductInformationActivity;
-import com.example.store_digikala.R;
-import com.example.store_digikala.pref.UserPrefrences;
-import com.example.store_digikala.model.Products;
-import com.example.store_digikala.network.Api;
-import com.example.store_digikala.network.RetrofitClientInstance;
+import com.example.Store_Digikala.R;
+import com.example.Store_Digikala.informaion.ProductInformationActivity;
+import com.example.Store_Digikala.model.Products;
+import com.example.Store_Digikala.network.Api;
+import com.example.Store_Digikala.network.RetrofitClientInstance;
+import com.example.Store_Digikala.prefs.UserPrefrences;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;

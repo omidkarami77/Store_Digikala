@@ -1,16 +1,14 @@
-package com.example.store_digikala.gallery;
+package com.example.Store_Digikala.gallery;
 
 import androidx.fragment.app.Fragment;
 
 import android.content.Context;
 import android.content.Intent;
 
-import com.example.store_digikala.SingleFragmentActivity;
-import com.example.store_digikala.categories.CategoriesSeperatorFragment;
+import com.example.Store_Digikala.SingleFragmentActivity;
+import com.example.Store_Digikala.categories.CategoriesSeperatorFragment;
 
 public class GallerySperatorActivity extends SingleFragmentActivity {
-
-
 
 
     public static Intent GalleryIntenet(Context context) {
@@ -20,10 +18,9 @@ public class GallerySperatorActivity extends SingleFragmentActivity {
 
 
 
-
-
     @Override
-    public Fragment createaFragment() {
+    public Fragment createFragment() {
         return CategoriesSeperatorFragment.newInstance();
     }
+
 }

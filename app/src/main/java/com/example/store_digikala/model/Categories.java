@@ -1,4 +1,5 @@
-package com.example.store_digikala.model;
+package com.example.Store_Digikala.model;
+
 
 public class Categories {
 
@@ -23,5 +24,4 @@ public class Categories {
         this.name = name;
         this.slug = slug;
     }
-
 }

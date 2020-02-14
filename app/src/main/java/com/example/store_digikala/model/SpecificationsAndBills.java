@@ -1,4 +1,4 @@
-package com.example.store_digikala.model;
+package com.example.Store_Digikala.model;
 
 public class SpecificationsAndBills {
 

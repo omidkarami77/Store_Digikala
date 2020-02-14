@@ -1,4 +1,4 @@
-package com.example.store_digikala.registerandsetting;
+package com.example.Store_Digikala.registerandsetting;
 
 
 import android.os.Bundle;
@@ -15,15 +15,13 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.example.store_digikala.service.PollService;
-import com.example.store_digikala.R;
-
+import com.example.Store_Digikala.R;
+import com.example.Store_Digikala.service.PollService;
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class SettingFragment extends Fragment {
-
 
     private EditText mEditTextTime;
     private Button mButtonSet;

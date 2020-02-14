@@ -1,11 +1,12 @@
-package com.example.store_digikala;
+package com.example.Store_Digikala;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.example.store_digikala.model.address.DaoMaster;
+import com.example.Store_Digikala.model.address.DaoMaster;
 
 import org.greenrobot.greendao.database.Database;
+
 
 public class MyDevOpenHelper extends DaoMaster.DevOpenHelper {
 

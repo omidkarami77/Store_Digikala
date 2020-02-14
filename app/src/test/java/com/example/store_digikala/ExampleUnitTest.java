@@ -1,4 +1,4 @@
-package com.example.store_digikala;
+package com.example.Store_Digikala;
 
 import org.junit.Test;
 

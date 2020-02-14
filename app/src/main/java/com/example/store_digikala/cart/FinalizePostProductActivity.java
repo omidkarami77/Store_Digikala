@@ -1,4 +1,4 @@
-package com.example.store_digikala.cart;
+package com.example.Store_Digikala.cart;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,13 +7,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.example.store_digikala.R;
+import com.example.Store_Digikala.R;
 
-import static com.example.store_digikala.map.ChooseAddressActivity.ADDRESS_SAVED_CHOOSE;
-import static com.example.store_digikala.map.ChooseAddressActivity.LAT_INTEGER;
-import static com.example.store_digikala.map.ChooseAddressActivity.LONG_INTEGER;
+import static com.example.Store_Digikala.map.ChooseAddressActivity.ADDRESS_SAVED_CHOOSE;
+import static com.example.Store_Digikala.map.ChooseAddressActivity.LAT_INTEGER;
+import static com.example.Store_Digikala.map.ChooseAddressActivity.LONG_INTEGER;
 
 public class FinalizePostProductActivity extends AppCompatActivity {
+
 
     public static Intent newIntent(Context context){
         Intent intent=new Intent(context,FinalizePostProductActivity.class);

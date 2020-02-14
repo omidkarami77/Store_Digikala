@@ -1,13 +1,18 @@
-package com.example.store_digikala.list;
+package com.example.Store_Digikala.list;
 
 
 import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -16,35 +21,27 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.store_digikala.information.ProductInformationActivity;
-import com.example.store_digikala.R;
-import com.example.store_digikala.model.Products;
-import com.example.store_digikala.network.Api;
-import com.example.store_digikala.network.RetrofitClientInstance;
+import com.example.Store_Digikala.R;
+import com.example.Store_Digikala.informaion.ProductInformationActivity;
+import com.example.Store_Digikala.model.Products;
+import com.example.Store_Digikala.network.Api;
+import com.example.Store_Digikala.network.RetrofitClientInstance;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class ListOfProductFragment extends Fragment {
 
+
     private static final String ARG_GALLERY = "requestItemProduct";
     private RecyclerView mRecyclerView;
     private ProductAdapter mAdapter;
 
+
     private int requsetCode;
-
-    public ListOfProductFragment() {
-        // Required empty public constructor
-    }
-
 
     public static ListOfProductFragment newInstance(int requestCode) {
         Bundle args = new Bundle();
@@ -55,12 +52,23 @@ public class ListOfProductFragment extends Fragment {
         return fragment;
     }
 
+    public ListOfProductFragment() {
+        // Required empty public constructor
+    }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        requsetCode = getArguments().getInt(ARG_GALLERY);
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_list_of_product, container, false);
         mRecyclerView = view.findViewById(R.id.recycler_navigarion_item_product);
+
         if (requsetCode == 1) {
             RetrofitClientInstance.getRetrofitInstance().create(Api.class).getPopularity().enqueue(new Callback<List<Products>>() {
                 @Override
@@ -70,7 +78,6 @@ public class ListOfProductFragment extends Fragment {
                         mAdapter = new ProductAdapter(productsList);
                         mRecyclerView.setAdapter(mAdapter);
                         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-
                     }
                 }
 
@@ -84,13 +91,12 @@ public class ListOfProductFragment extends Fragment {
                 @Override
                 public void onResponse(Call<List<Products>> call, Response<List<Products>> response) {
                     if (response.isSuccessful()) {
-                        List<Products> productsList = response.body();
-                        mAdapter = new ProductAdapter(productsList);
-                        mRecyclerView.setAdapter(mAdapter);
-                        mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-                    }
+                    List<Products> productsList = response.body();
+                    mAdapter = new ProductAdapter(productsList);
+                    mRecyclerView.setAdapter(mAdapter);
+                    mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
                 }
-
+            }
 
                 @Override
                 public void onFailure(Call<List<Products>> call, Throwable t) {
@@ -117,10 +123,10 @@ public class ListOfProductFragment extends Fragment {
             });
         }
         return view;
+
     }
 
     private class ProductHolder extends RecyclerView.ViewHolder {
-
         private ImageView mImageView;
         private TextView mTextViewName;
         private TextView mTextViewPrice;
@@ -141,6 +147,7 @@ public class ListOfProductFragment extends Fragment {
             });
         }
 
+
         private void bind(Products products) {
             mProducts = products;
             mTextViewName.setText(products.getName());
@@ -149,7 +156,6 @@ public class ListOfProductFragment extends Fragment {
                 Picasso.get().load(mProducts.getImages().get(0).getPath()).fit().centerCrop().into(mImageView);
             }
         }
-
     }
 
     private class ProductAdapter extends RecyclerView.Adapter<ProductHolder> {
@@ -190,4 +196,3 @@ public class ListOfProductFragment extends Fragment {
     }
 
 }
-

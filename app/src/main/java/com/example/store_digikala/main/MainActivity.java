@@ -1,4 +1,4 @@
-package com.example.store_digikala.main;
+package com.example.Store_Digikala.main;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -8,6 +8,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -22,11 +23,11 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.store_digikala.navigation.NavigationItemActivity;
-import com.example.store_digikala.R;
-import com.example.store_digikala.pref.UserPrefrences;
-import com.example.store_digikala.gallery.GallerySperatorActivity;
-import com.example.store_digikala.search.SearchResultActivity;
+import com.example.Store_Digikala.R;
+import com.example.Store_Digikala.gallery.GallerySperatorActivity;
+import com.example.Store_Digikala.navigation.NavigationItemActivity;
+import com.example.Store_Digikala.search.SearchResultActivity;
+import com.example.Store_Digikala.prefs.UserPrefrences;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -138,7 +139,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 return true;
             case R.id.item_about:
                 View view1 = findViewById(R.id.drawer_layout);
-                Snackbar.make(view1, "Omid Android Developer\nOmidTkd77@gmail.com", Snackbar.LENGTH_LONG).show();
+                Snackbar.make(view1, "Behrooz Android Developer\nbehroozeivazi@yahoo.com", Snackbar.LENGTH_LONG).show();
                 return true;
 
             case R.id.item_cart:
@@ -214,5 +215,4 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return true;
 
     }
-
 }

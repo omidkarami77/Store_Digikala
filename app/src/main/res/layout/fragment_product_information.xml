@@ -8,7 +8,7 @@
     android:layout_margin="0dp"
     android:background="@android:color/white"
     android:overScrollMode="always"
-    tools:context=".information.ProductInformationFragment"
+    tools:context=".informaion.ProductInformationFragment"
     android:layout_marginBottom="2dp"
     android:layoutDirection="rtl"
     >
@@ -31,7 +31,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:title="دیجیکالا" />
+            app:title="آواتار مارکت" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/image_gellery_product_item"
@@ -61,7 +61,7 @@
                 android:background="@android:color/white"
                 android:gravity="center"
                 android:padding="2dp"
-                />
+              />
         </androidx.cardview.widget.CardView>
 
 

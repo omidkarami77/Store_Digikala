@@ -1,4 +1,4 @@
-package com.example.store_digikala.map;
+package com.example.Store_Digikala.map;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -15,8 +15,8 @@ import android.location.LocationManager;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.example.store_digikala.R;
-import com.example.store_digikala.cart.FinalizePostProductActivity;
+import com.example.Store_Digikala.R;
+import com.example.Store_Digikala.cart.FinalizePostProductActivity;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
@@ -27,12 +27,12 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import java.util.List;
 import java.util.Locale;
 
-public class ChooseAddressActivity extends AppCompatActivity implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener, LocationListener {
+public class ChooseAddressActivity extends AppCompatActivity implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener, LocationListener{
     private GoogleMap mMap;
 
-    public static final String LAT_INTEGER="LAT";
-    public static final String LONG_INTEGER="LONG";
-    public static final String ADDRESS_SAVED_CHOOSE ="address";
+    public static final String LAT_INTEGER="androidx.fragment.app.FragmentActivity.LAT";
+    public static final String LONG_INTEGER="androidx.fragment.app.FragmentActivity.LONG";
+    public static final String ADDRESS_SAVED_CHOOSE ="androidx.fragment.app.FragmentActivity.address";
     private double lat;
     private double lon;
     private LocationManager mLocationManager;
@@ -114,8 +114,8 @@ public class ChooseAddressActivity extends AppCompatActivity implements OnMapRea
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
-        getLocationFromMap();
-        googleMap=mMap;
+      getLocationFromMap();
+      googleMap=mMap;
         Log.d("test", "onMapReady()");
 
 //        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(35.69439, 51.42151), 10.0f));

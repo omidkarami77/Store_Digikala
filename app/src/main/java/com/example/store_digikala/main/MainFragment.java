@@ -1,4 +1,4 @@
-package com.example.store_digikala.main;
+package com.example.Store_Digikala.main;
 
 
 import android.app.ProgressDialog;
@@ -14,6 +14,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,26 +28,21 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.airbnb.lottie.LottieAnimationView;
-import com.example.store_digikala.navigation.NavigationItemActivity;
-import com.example.store_digikala.information.ProductInformationActivity;
-import com.example.store_digikala.R;
-import com.example.store_digikala.model.Products;
-import com.example.store_digikala.network.Api;
-import com.example.store_digikala.network.RetrofitClientInstance;
+import com.example.Store_Digikala.informaion.ProductInformationActivity;
+import com.example.Store_Digikala.R;
+import com.example.Store_Digikala.model.Products;
+import com.example.Store_Digikala.navigation.*;
+import com.example.Store_Digikala.network.Api;
+import com.example.Store_Digikala.network.RetrofitClientInstance;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class MainFragment extends Fragment {
-
     private FrameLayout frameLayout;
     private LottieAnimationView lottieAnimationView;
 
@@ -330,5 +329,4 @@ public class MainFragment extends Fragment {
 
         }
     }
-
 }

@@ -1,10 +1,7 @@
-package com.example.store_digikala.registerandsetting;
+package com.example.Store_Digikala.registerandsetting;
 
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,22 +10,21 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.store_digikala.R;
-import com.example.store_digikala.pref.UserPrefrences;
-import com.example.store_digikala.model.Customer;
-import com.example.store_digikala.network.Api;
-import com.example.store_digikala.network.RetrofitClientInstance;
+import com.example.Store_Digikala.R;
+import com.example.Store_Digikala.model.orderModel.Customer;
+import com.example.Store_Digikala.network.Api;
+import com.example.Store_Digikala.network.RetrofitClientInstance;
+import com.example.Store_Digikala.prefs.UserPrefrences;
 
+import androidx.fragment.app.Fragment;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class RegisterFragment extends Fragment {
-
     private Button mRegisterBtn;
 
     public RegisterFragment() {
@@ -90,12 +86,12 @@ public class RegisterFragment extends Fragment {
             public void onResponse(Call<Customer> call, Response<Customer> response) {
                 if (response.isSuccessful()){
                     int id=response.body().getId();
-                    Log.e("omidkarami", "onResponse: "+UserPrefrences.getPrefCustomerId(getActivity()));
+                    Log.e("alisalek", "onResponse: "+UserPrefrences.getPrefCustomerId(getActivity()));
                     UserPrefrences.setPrefCustomerId(getActivity(),id);
                     Toast.makeText(getActivity(), UserPrefrences.getPrefCustomerId(getActivity())+"", Toast.LENGTH_SHORT).show();
                     getActivity().finish();
                 }else {
-                    Log.e("omidkarami2", "onResponse:sik");
+                    Log.e("alisalek2", "onResponse:sik");
                 }
             }
 

@@ -1,8 +1,9 @@
-package com.example.store_digikala.model.address;
+package com.example.Store_Digikala.model.address;
 
 import android.content.Context;
 
-import com.example.store_digikala.App;
+import com.example.Store_Digikala.App;
+
 
 import java.util.List;
 
@@ -46,4 +47,3 @@ public class AddressLab {
     }
 
 }
-

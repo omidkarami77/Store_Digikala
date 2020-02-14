@@ -1,8 +1,16 @@
-package com.example.store_digikala.network;
+package com.example.Store_Digikala.network;
+
+import com.example.Store_Digikala.model.Categories;
+import com.example.Store_Digikala.model.Review;
+import com.example.Store_Digikala.model.orderModel.Coupon;
+import com.example.Store_Digikala.model.orderModel.Customer;
+import com.example.Store_Digikala.model.Products;
+import com.example.Store_Digikala.model.orderModel.OrderJsonBody;
 
 
 import java.util.List;
-import com.example.store_digikala.model.*;
+
+
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.Field;
@@ -15,6 +23,7 @@ import retrofit2.http.Query;
 public interface Api {
     String spacify = "consumer_key=ck_0ecdbf5630575e2ea2d86a9fe5c913b0682510aa&consumer_secret=cs_545b1f473ce462428c311e9d1cf371a0e6f90729";
     @GET("products?" + spacify)
+
     Call<List<Products>> getProductList();
 
     @GET("products?consumer_key=ck_0ecdbf5630575e2ea2d86a9fe5c913b0682510aa&consumer_secret=cs_545b1f473ce462428c311e9d1cf371a0e6f90729&orderby=rating")
@@ -41,9 +50,9 @@ public interface Api {
     @POST("customers?" + spacify)
     @FormUrlEncoded
     Call<Customer> createCustomer(@Field("first_name") String first_name,
-                                                                           @Field("last_name") String last_name,
-                                                                           @Field("username") String username,
-                                                                           @Field("email") String email);
+                                  @Field("last_name") String last_name,
+                                  @Field("username") String username,
+                                  @Field("email") String email);
 
     @POST("orders?" + spacify)
     Call<Customer> sendOrder(@Body OrderJsonBody body);
@@ -59,3 +68,4 @@ public interface Api {
     Call<Customer> sendNewReview(@Field("product_id") int product_id, @Field("review") String review, @Field("reviewer") String reviewer_name, @Field("reviewer_email") String email);
 
 }
+

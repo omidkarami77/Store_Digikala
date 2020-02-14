@@ -1,9 +1,8 @@
-package com.example.store_digikala.model.address;
-
+package com.example.Store_Digikala.model.address;
 
 import org.greenrobot.greendao.annotation.Entity;
-import org.greenrobot.greendao.annotation.Generated;
 import org.greenrobot.greendao.annotation.Id;
+import org.greenrobot.greendao.annotation.Generated;
 
 @Entity
 public class Address {
@@ -17,7 +16,7 @@ public class Address {
     private String Address2;
     @Generated(hash = 913072552)
     public Address(Long id, int lat, int longtiude, String Address1,
-                   String Address2) {
+            String Address2) {
         this.id = id;
         this.lat = lat;
         this.longtiude = longtiude;

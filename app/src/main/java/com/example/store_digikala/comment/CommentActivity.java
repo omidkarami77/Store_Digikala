@@ -1,4 +1,4 @@
-package com.example.store_digikala.comment;
+package com.example.Store_Digikala.comment;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,11 +18,11 @@ import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
-import com.example.store_digikala.R;
-import com.example.store_digikala.model.Products;
-import com.example.store_digikala.model.Review;
-import com.example.store_digikala.network.Api;
-import com.example.store_digikala.network.RetrofitClientInstance;
+import com.example.Store_Digikala.R;
+import com.example.Store_Digikala.model.Products;
+import com.example.Store_Digikala.model.Review;
+import com.example.Store_Digikala.network.Api;
+import com.example.Store_Digikala.network.RetrofitClientInstance;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.List;
@@ -32,7 +32,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class CommentActivity extends AppCompatActivity {
-    private static final String EXTRA_PRODUCT_ID_REVIEW = "productId.com.example.store_digikala.comment.commentcontroller";
+    private static final String EXTRA_PRODUCT_ID_REVIEW = "productId.com.example.Store_Digikala.fragmentfolder.commentcontroller";
     private RecyclerView mRecyclerview;
     private commentAdapter mAdapter;
     private int product_id;

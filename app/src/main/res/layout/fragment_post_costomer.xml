@@ -25,14 +25,14 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <!--<TextView-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:gravity="center"-->
-        <!--android:textSize="16sp"-->
-        <!--android:text="@string/sign_up_to_get_a_purchase"-->
-        <!--android:textColor="@color/green"-->
-        <!--android:textStyle="italic|bold"-->
-        <!--/>-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:gravity="center"-->
+            <!--android:textSize="16sp"-->
+            <!--android:text="@string/sign_up_to_get_a_purchase"-->
+            <!--android:textColor="@color/green"-->
+            <!--android:textStyle="italic|bold"-->
+            <!--/>-->
     </LinearLayout>
 
     <LinearLayout

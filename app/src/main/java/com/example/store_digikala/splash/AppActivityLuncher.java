@@ -1,6 +1,4 @@
-package com.example.store_digikala.splash;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.Store_Digikala.splash;
 
 import android.content.Intent;
 import android.net.ConnectivityManager;
@@ -9,11 +7,12 @@ import android.os.Handler;
 import android.widget.Toast;
 
 import com.airbnb.lottie.LottieAnimationView;
-import com.example.store_digikala.main.MainActivity;
-import com.example.store_digikala.R;
+import com.example.Store_Digikala.R;
+import com.example.Store_Digikala.main.MainActivity;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class AppActivityLuncher extends AppCompatActivity {
-
 
     private LottieAnimationView lottieAnimationView;
 

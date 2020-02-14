@@ -1,4 +1,4 @@
-package com.example.store_digikala.cart;
+package com.example.Store_Digikala.cart;
 
 
 import android.app.Activity;
@@ -15,18 +15,19 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.store_digikala.R;
-import com.example.store_digikala.model.Biling;
-import com.example.store_digikala.model.Coupon;
-import com.example.store_digikala.model.Customer;
-import com.example.store_digikala.model.Order;
-import com.example.store_digikala.model.OrderJsonBody;
-import com.example.store_digikala.model.address.Address;
-import com.example.store_digikala.model.address.AddressLab;
-import com.example.store_digikala.model.modeldata.CartLab;
-import com.example.store_digikala.network.Api;
-import com.example.store_digikala.network.RetrofitClientInstance;
-import com.example.store_digikala.pref.UserPrefrences;
+import com.example.Store_Digikala.R;
+import com.example.Store_Digikala.map.MapActivity;
+import com.example.Store_Digikala.model.address.Address;
+import com.example.Store_Digikala.model.address.AddressLab;
+import com.example.Store_Digikala.model.orderModel.Biling;
+import com.example.Store_Digikala.model.orderModel.Coupon;
+import com.example.Store_Digikala.model.orderModel.Customer;
+import com.example.Store_Digikala.model.orderModel.Order;
+import com.example.Store_Digikala.model.orderModel.OrderJsonBody;
+import com.example.Store_Digikala.modeldata.CartLab;
+import com.example.Store_Digikala.network.Api;
+import com.example.Store_Digikala.network.RetrofitClientInstance;
+import com.example.Store_Digikala.prefs.UserPrefrences;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,7 +42,7 @@ import retrofit2.Response;
 public class FinalizePostProductFragment extends Fragment {
 
     private static final int REQ_MAP = 1;
-    private static final String EXTRA_RESULT_CHOOSE = "com.example.store_digikala.cart.chooseproduct";
+    private static final String EXTRA_RESULT_CHOOSE = "com.example.Store_Digikala.fragmentfolder.chooseproduct";
     private EditText mCountry;
     private EditText mCity;
     private EditText mPostCode;

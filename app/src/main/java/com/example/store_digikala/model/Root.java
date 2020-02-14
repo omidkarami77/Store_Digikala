@@ -1,8 +1,10 @@
-package com.example.store_digikala.model;
+package com.example.Store_Digikala.model;
+
 
 import java.util.List;
 
 public class Root {
+
 
     private List<Products> products;
 

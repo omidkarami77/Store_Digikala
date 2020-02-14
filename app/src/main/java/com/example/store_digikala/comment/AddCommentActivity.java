@@ -1,4 +1,4 @@
-package com.example.store_digikala.comment;
+package com.example.Store_Digikala.comment;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
@@ -8,12 +8,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.FrameLayout;
 
-import com.example.store_digikala.R;
+import com.example.Store_Digikala.R;
 
-public class AddCommentActivity extends AppCompatActivity {
+public class AddCommentActivity extends AppCompatActivity  {
     private int id_product;
     private FrameLayout frameLayout;
-    private static final String PRODUCT_ID ="com.example.store_digikala.comment.commentcontroller" ;
+    private static final String PRODUCT_ID ="com.example.Store_Digikala.fragmentfolder.commentcontroller" ;
 
     public static Intent newIntent(Context context, int id){
         Intent intent=new Intent(context,AddCommentActivity.class);
@@ -35,4 +35,3 @@ public class AddCommentActivity extends AppCompatActivity {
 
     }
 }
-

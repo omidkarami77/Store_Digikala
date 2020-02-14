@@ -16,14 +16,14 @@
             android:id="@+id/item_popular"
             android:icon="@drawable/ic_action_navigation_item"
             android:title="@string/popular"
-            />
+           />
 
         <item
             android:id="@+id/item_new"
             android:icon="@drawable/ic_action_navigation_item"
             android:title="@string/new_peoduct"
 
-            />
+           />
 
         <item
             android:id="@+id/item_MostSeler"
@@ -37,7 +37,7 @@
             android:id="@+id/item_gallery"
             android:icon="@drawable/ic_action_navigation_item"
             android:title="@string/categories"
-            />
+           />
 
     </group>
     <item
@@ -55,7 +55,7 @@
             android:id="@+id/item_cart"
             android:icon="@drawable/ic_gallery_item_cart"
             android:title="@string/cart"
-            />
+           />
     </group>
 
     <group android:checkableBehavior="single"
@@ -66,14 +66,14 @@
             android:id="@+id/item_setting"
             android:icon="@drawable/ic_action_setting"
             android:title="@string/setting"
-            />
+          />
 
         <item
             android:id="@+id/item_about"
 
             android:title="@string/about_us"
             />
-        <!--  android:icon="@drawable/ic_action_aboutus_icon" -->
+          <!--  android:icon="@drawable/ic_action_aboutus_icon" -->
     </group>
 
 

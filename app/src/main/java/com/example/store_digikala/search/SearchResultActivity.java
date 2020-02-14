@@ -1,10 +1,13 @@
-package com.example.store_digikala.search;
+package com.example.Store_Digikala.search;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 import android.content.Context;
 import android.content.Intent;
@@ -24,23 +27,19 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.store_digikala.information.ProductInformationActivity;
-import com.example.store_digikala.R;
-import com.example.store_digikala.model.Products;
-import com.example.store_digikala.network.Api;
-import com.example.store_digikala.network.RetrofitClientInstance;
+import com.example.Store_Digikala.R;
+import com.example.Store_Digikala.informaion.ProductInformationActivity;
+import com.example.Store_Digikala.model.Products;
+import com.example.Store_Digikala.network.Api;
+import com.example.Store_Digikala.network.RetrofitClientInstance;
 import com.google.android.material.snackbar.Snackbar;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-
 public class SearchResultActivity extends AppCompatActivity {
 
-    public static final String EXTRA_PRODUCT_ID = "com.example.store_digikala.searchresult";
+    public static final String EXTRA_PRODUCT_ID = "com.example.Store_Digikala.searchresult";
     private Toolbar mToolbar;
     private RecyclerView mRecyclerView;
     private String SearchString;
@@ -68,7 +67,7 @@ public class SearchResultActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_search_sort_filter);
         findItem();
-        mToolbar.setTitle("TibikalaStore");
+        mToolbar.setTitle("AvatarStore");
         setSupportActionBar(mToolbar);
 
         arrayAdapterSort = ArrayAdapter.createFromResource(this, R.array.sort_spinner_string,

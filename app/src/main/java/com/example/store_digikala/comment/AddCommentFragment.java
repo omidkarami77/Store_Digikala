@@ -1,4 +1,4 @@
-package com.example.store_digikala.comment;
+package com.example.Store_Digikala.comment;
 
 
 import android.content.Intent;
@@ -16,12 +16,12 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.store_digikala.R;
-import com.example.store_digikala.model.Customer;
-import com.example.store_digikala.navigation.NavigationItemActivity;
-import com.example.store_digikala.network.Api;
-import com.example.store_digikala.network.RetrofitClientInstance;
-import com.example.store_digikala.pref.UserPrefrences;
+import com.example.Store_Digikala.R;
+import com.example.Store_Digikala.navigation.NavigationItemActivity;
+import com.example.Store_Digikala.model.orderModel.Customer;
+import com.example.Store_Digikala.network.Api;
+import com.example.Store_Digikala.network.RetrofitClientInstance;
+import com.example.Store_Digikala.prefs.UserPrefrences;
 
 import retrofit2.Call;
 import retrofit2.Callback;
