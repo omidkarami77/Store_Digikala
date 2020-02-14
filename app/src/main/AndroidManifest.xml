@@ -15,7 +15,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.Light.NoActionBar">
-        <activity android:name=".comment.CommentActivity"></activity>
+        <activity android:name=".cart.FinalizePostProductActivity"></activity>
+        <activity android:name=".comment.CommentActivity" />
         <activity android:name=".comment.AddCommentActivity" />
         <activity android:name=".gallery.GallerySperatorActivity" />
         <activity android:name=".search.SearchResultActivity" />
