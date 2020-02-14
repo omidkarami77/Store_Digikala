@@ -1,11 +1,11 @@
-package com.example.store_digikala;
+package com.example.store_digikala.information;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
+
+import com.example.store_digikala.SingleFragmentActivity;
 
 public class ProductInformationActivity extends SingleFragmentActivity {
     private static final String EXTRA_PRODUCT_ID = "com.example.store_digikala.product_id";

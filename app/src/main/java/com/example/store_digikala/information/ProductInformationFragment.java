@@ -1,4 +1,4 @@
-package com.example.store_digikala;
+package com.example.store_digikala.information;
 
 
 import android.annotation.SuppressLint;
@@ -30,6 +30,7 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.store_digikala.R;
 import com.example.store_digikala.model.Images;
 import com.example.store_digikala.model.Products;
 import com.example.store_digikala.model.modeldata.Cart;

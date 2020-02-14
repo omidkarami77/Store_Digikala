@@ -1,4 +1,4 @@
-package com.example.store_digikala;
+package com.example.store_digikala.navigation;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -8,13 +8,16 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.store_digikala.R;
+import com.example.store_digikala.cart.ShowProductCartFragment;
+import com.example.store_digikala.list.ListOfProductFragment;
 import com.example.store_digikala.registerandsetting.RegisterFragment;
 import com.example.store_digikala.registerandsetting.SettingFragment;
 
 public class NavigationItemActivity extends AppCompatActivity {
 
 
-    private static final String EXTRA_REQUEST_CODE = "com.example.store_digikala.NavigationItemActivity";
+    private static final String EXTRA_REQUEST_CODE = "com.example.store_digikala.navigation.NavigationItemActivity";
     private int requestCode;
 
     public static Intent NavigationItemIntent(Context context, int requsetCode) {

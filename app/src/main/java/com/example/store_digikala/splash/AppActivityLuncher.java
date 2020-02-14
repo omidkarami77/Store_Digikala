@@ -9,7 +9,7 @@ import android.os.Handler;
 import android.widget.Toast;
 
 import com.airbnb.lottie.LottieAnimationView;
-import com.example.store_digikala.MainActivity;
+import com.example.store_digikala.main.MainActivity;
 import com.example.store_digikala.R;
 
 public class AppActivityLuncher extends AppCompatActivity {

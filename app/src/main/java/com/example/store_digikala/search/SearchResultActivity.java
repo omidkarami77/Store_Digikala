@@ -24,7 +24,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.store_digikala.ProductInformationActivity;
+import com.example.store_digikala.information.ProductInformationActivity;
 import com.example.store_digikala.R;
 import com.example.store_digikala.model.Products;
 import com.example.store_digikala.network.Api;

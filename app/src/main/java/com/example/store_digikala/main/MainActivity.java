@@ -1,4 +1,4 @@
-package com.example.store_digikala;
+package com.example.store_digikala.main;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -22,6 +22,10 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.store_digikala.navigation.NavigationItemActivity;
+import com.example.store_digikala.R;
+import com.example.store_digikala.pref.UserPrefrences;
+import com.example.store_digikala.gallery.GallerySperatorActivity;
 import com.example.store_digikala.search.SearchResultActivity;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;

@@ -15,9 +15,9 @@ import androidx.annotation.Nullable;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 
-import com.example.store_digikala.ProductInformationActivity;
+import com.example.store_digikala.information.ProductInformationActivity;
 import com.example.store_digikala.R;
-import com.example.store_digikala.UserPrefrences;
+import com.example.store_digikala.pref.UserPrefrences;
 import com.example.store_digikala.model.Products;
 import com.example.store_digikala.network.Api;
 import com.example.store_digikala.network.RetrofitClientInstance;

@@ -1,4 +1,4 @@
-package com.example.store_digikala;
+package com.example.store_digikala.pref;
 
 import android.content.Context;
 import android.content.SharedPreferences;

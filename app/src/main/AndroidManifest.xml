@@ -16,10 +16,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.Light.NoActionBar">
-        <activity android:name=".GallerySperatorActivity"></activity>
+        <activity android:name=".gallery.GallerySperatorActivity"></activity>
         <activity android:name=".search.SearchResultActivity" />
-        <activity android:name=".ProductInformationActivity" />
-        <activity android:name=".NavigationItemActivity" />
+        <activity android:name=".information.ProductInformationActivity" />
+        <activity android:name=".navigation.NavigationItemActivity" />
         <activity android:name=".SingleFragmentActivity" />
         <activity android:name=".splash.AppActivityLuncher">
         <intent-filter>
@@ -28,7 +28,7 @@
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".main.MainActivity">
 
         </activity>
     </application>

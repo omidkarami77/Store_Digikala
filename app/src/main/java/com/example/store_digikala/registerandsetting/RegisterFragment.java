@@ -14,7 +14,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.store_digikala.R;
-import com.example.store_digikala.UserPrefrences;
+import com.example.store_digikala.pref.UserPrefrences;
 import com.example.store_digikala.model.Customer;
 import com.example.store_digikala.network.Api;
 import com.example.store_digikala.network.RetrofitClientInstance;

@@ -1,4 +1,4 @@
-package com.example.store_digikala;
+package com.example.store_digikala.list;
 
 
 import android.content.Intent;
@@ -16,6 +16,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.store_digikala.information.ProductInformationActivity;
+import com.example.store_digikala.R;
 import com.example.store_digikala.model.Products;
 import com.example.store_digikala.network.Api;
 import com.example.store_digikala.network.RetrofitClientInstance;
