@@ -139,8 +139,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 return true;
             case R.id.item_about:
                 View view1 = findViewById(R.id.drawer_layout);
-                Snackbar.make(view1, "Behrooz Android Developer\nbehroozeivazi@yahoo.com", Snackbar.LENGTH_LONG).show();
+                Snackbar.make(view1, "omid karami"+"\n"+"omidtkd77@gmail.com", Snackbar.LENGTH_LONG).show();
                 return true;
+
 
             case R.id.item_cart:
                 if (UserPrefrences.getPrefUserName(this) == null) {
