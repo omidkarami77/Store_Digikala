@@ -31,6 +31,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.store_digikala.R;
+import com.example.store_digikala.comment.AddCommentActivity;
 import com.example.store_digikala.model.Images;
 import com.example.store_digikala.model.Products;
 import com.example.store_digikala.model.modeldata.Cart;
