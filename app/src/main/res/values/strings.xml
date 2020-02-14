@@ -5,6 +5,8 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="open_drawer">open</string>
     <string name="close_drawer">close</string>
+    <string name="name_developer">omid karami </string>
+    <string name="gmail_developer">omidtkd77@gmail.com</string>
     <string name="categories">آلبوم محصولات</string>
     <string name="top_seller">پر فروش ترین ها</string>
     <string name="new_peoduct">جدیدترین ها</string>
