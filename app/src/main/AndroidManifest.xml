@@ -17,11 +17,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.Light.NoActionBar">
         <activity android:name=".GallerySperatorActivity"></activity>
-        <activity android:name=".SearchResultActivity" />
+        <activity android:name=".search.SearchResultActivity" />
         <activity android:name=".ProductInformationActivity" />
         <activity android:name=".NavigationItemActivity" />
         <activity android:name=".SingleFragmentActivity" />
-        <activity android:name=".AppActivityLuncher">
+        <activity android:name=".splash.AppActivityLuncher">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
 

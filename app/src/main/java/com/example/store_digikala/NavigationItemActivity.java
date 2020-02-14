@@ -8,6 +8,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.store_digikala.registerandsetting.RegisterFragment;
+import com.example.store_digikala.registerandsetting.SettingFragment;
+
 public class NavigationItemActivity extends AppCompatActivity {
 
 

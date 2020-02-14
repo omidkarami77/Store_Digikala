@@ -1,4 +1,4 @@
-package com.example.store_digikala;
+package com.example.store_digikala.search;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,6 +24,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.store_digikala.ProductInformationActivity;
+import com.example.store_digikala.R;
 import com.example.store_digikala.model.Products;
 import com.example.store_digikala.network.Api;
 import com.example.store_digikala.network.RetrofitClientInstance;
