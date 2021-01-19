@@ -1,6 +1,6 @@
 # Store_Digikala
 فروشگاه آنلاین مشابه دیجیکلا 
 
-![](1.jpg | width=100)
-![](2.jpg)
-![](3.jpg)
+<img src="1.jpg" with="100" height="100">
+<img src="2.jpg" with="200" height="100">
+<img src="2.jpg" with="200" height="100">
